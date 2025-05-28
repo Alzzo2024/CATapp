@@ -122,10 +122,10 @@ class CentroAcademicoApp {
             {
                 id: 1,
                 title: "Celebração dos 869 annos da Manifestis Probatum",
-                description: "Dia 23 de Maio de 2025 o Centro Académico Tradicionalista celebrou os 869 annos da bula manifestis...",
+                description: "Dia 23 de Maio de 2025 o Centro Académico Tradicionalista celebrou os 846 annos da bula manifestis...",
                 date: "2025-05-23",
                 image: "img/manifestisprobatumimg.jpg",
-                content: "Dia 23 de Maio de 2025 o Centro Académico Tradicionalista celebrou os 869 annos da bula manifestis probatum lançada por sua sanctidade Papa Alexandre III, participámos da missa das 19:00 na Egreja de Nossa Senhora Concepção Velha, e posteriormente um momento de comes e bebes entre membros e não-membros do Centro."
+                content: "Dia 23 de Maio de 2025 o Centro Académico Tradicionalista celebrou os 846 annos da bula manifestis probatum lançada por sua sanctidade Papa Alexandre III, participámos da missa das 19:00 na Egreja de Nossa Senhora Concepção Velha, e posteriormente um momento de comes e bebes entre membros e não-membros do Centro."
             }
         ];
 
