@@ -1,0 +1,104 @@
+{
+    "app": {
+        "name": "Centro Académico Tradicionalista",
+        "shortName": "CAT",
+        "version": "1.0.3",
+        "logo": "img/CATlogo.png"
+    },
+    "menu": {
+        "navigation": [
+            {
+                "id": "home",
+                "title": "Início",
+                "icon": "fas fa-home"
+            },
+            {
+                "id": "news",
+                "title": "Notícias",
+                "icon": "fas fa-newspaper"
+            },
+            {
+                "id": "agenda",
+                "title": "Agenda",
+                "icon": "fas fa-calendar"
+            }
+        ],
+        "participant": [
+            {
+                "title": "Tornar-se Participante",
+                "icon": "fas fa-user-plus",
+                "url": "https://forms.gle/exemplo"
+            }
+        ]
+    },
+    "settings": {
+        "items": [
+            {
+                "title": "Atualizar Conteúdo",
+                "icon": "fas fa-sync-alt",
+                "type": "action",
+                "id": "update"
+            },
+            {
+                "title": "Website Oficial",
+                "icon": "fas fa-globe",
+                "type": "link",
+                "url": "https://centroacademicotradicionalist.pt"
+            },
+            {
+                "title": "Contactos",
+                "icon": "fas fa-envelope",
+                "type": "link",
+                "url": "mailto:geral@centroacademicotradicionalist.pt"
+            },
+            {
+                "title": "Versão",
+                "icon": "fas fa-info-circle",
+                "type": "info",
+                "value": "1.0.3"
+            }
+        ]
+    },
+    "banners": [
+        {
+            "id": 1,
+            "image": "img/869annosmp.png",
+            "title": "869 Anos Manifestis Probatum",
+            "description": "Celebração dos 869 anos da Bula Manifestis Probatum"
+        }
+    ],
+    "news": [
+        {
+            "id": 1,
+            "title": "Celebração dos 846 annos da Manifestis Probatum",
+            "description": "Dia 23 de Maio de 2025 o Centro Académico Tradicionalista celebrou os 846 annos da bula manifestis...",
+            "date": "2025-05-23",
+            "image": "img/manifestisprobatumimg.jpg",
+            "content": "Dia 23 de Maio de 2025 o Centro Académico Tradicionalista celebrou os 846 annos da bula manifestis probatum lançada por sua sanctidade Papa Alexandre III, participámos da missa das 19:00 na Egreja de Nossa Senhora Concepção Velha, e posteriormente um momento de comes e bebes entre membros e não-membros do Centro."
+        }
+    ],
+    "agenda": [
+        {
+            "id": 1,
+            "title": "Manifestis Probatum",
+            "description": "Celebração da Bula Manifestis Probatum, Sancta Missa e jantar/convívio com membros e simpatizantes do CAT.",
+            "date": "2025-05-23",
+            "time": "19:00-20:30",
+            "location": "Igreja de Nossa Senhora da Conceição Velha",
+            "image": "img/869annosmp.png",
+            "type": "meeting"
+        }
+    ],
+    "texts": {
+        "sections": {
+            "participant": "Participante"
+        },
+        "buttons": {
+            "updating": "A atualizar..."
+        },
+        "modals": {
+            "updateSuccess": "Conteúdo atualizado com sucesso!",
+            "updateError": "Erro ao atualizar conteúdo"
+        }
+    }
+}
