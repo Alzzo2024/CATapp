@@ -6,6 +6,11 @@
     <title>Centro Académico Tradicionalista</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#9c2336">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="CAT">
 </head>
 <body>
     <!-- Splash Screen -->
@@ -20,7 +25,7 @@
     <div id="mainApp" class="main-app hidden">
         <!-- Header -->
         <header class="header">
-            <button class="menu-btn" id="menuBtn">
+            <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menu">
                 <i class="fas fa-bars"></i>
             </button>
             <div class="header-logo">
@@ -36,11 +41,13 @@
                     <img src="img/CATlogo.png" alt="Centro Académico Tradicionalista">
                 </div>
                 
-                <nav class="side-menu-nav">
+                <nav class="side-menu-nav" id="sideMenuNav">
                     <!-- Menu items will be populated by JavaScript -->
                 </nav>
 
-                                <div class="menu-section">
+                <div class="menu-divider"></div>
+
+                <div class="menu-section" id="participantSection">
                     <!-- Participant section will be populated by JavaScript -->
                 </div>
 
@@ -63,15 +70,20 @@
             <!-- Home Page -->
             <div id="homePage" class="page active">
                 <!-- Banner Carousel -->
-                <div class="banner-carousel">
-                    <!-- Banners will be populated by JavaScript -->
+                <div class="banner-carousel" id="bannerCarousel">
+                    <div class="banner-container" id="bannerContainer">
+                        <!-- Banners will be populated by JavaScript -->
+                    </div>
+                    <div class="banner-indicators" id="bannerIndicators">
+                        <!-- Indicators will be populated by JavaScript -->
+                    </div>
                 </div>
 
                 <!-- News Section -->
                 <section class="content-section">
                     <div class="section-header">
                         <h2>Notícias</h2>
-                        <button class="see-all-btn" data-target="news">Ver todas</button>
+                        <button class="see-all-btn" data-target="news" type="button">Ver todas</button>
                     </div>
                     <div class="cards-grid" id="newsGrid">
                         <!-- News cards will be populated by JavaScript -->
@@ -82,7 +94,7 @@
                 <section class="content-section">
                     <div class="section-header">
                         <h2>Agenda</h2>
-                        <button class="see-all-btn" data-target="agenda">Ver todos</button>
+                        <button class="see-all-btn" data-target="agenda" type="button">Ver todos</button>
                     </div>
                     <div class="cards-grid" id="agendaGrid">
                         <!-- Agenda cards will be populated by JavaScript -->
@@ -93,7 +105,7 @@
             <!-- News Page -->
             <div id="newsPage" class="page">
                 <div class="page-header">
-                    <button class="back-btn" data-target="home">
+                    <button class="back-btn" data-target="home" type="button" aria-label="Voltar">
                         <i class="fas fa-arrow-left"></i>
                     </button>
                     <h1>Notícias</h1>
@@ -106,14 +118,14 @@
             <!-- Agenda Page -->
             <div id="agendaPage" class="page">
                 <div class="page-header">
-                    <button class="back-btn" data-target="home">
+                    <button class="back-btn" data-target="home" type="button" aria-label="Voltar">
                         <i class="fas fa-arrow-left"></i>
                     </button>
                     <h1>Agenda</h1>
                 </div>
                 <div class="filter-tabs">
-                    <button class="filter-tab active" data-filter="future">Futuros</button>
-                    <button class="filter-tab" data-filter="past">Passados</button>
+                    <button class="filter-tab active" data-filter="future" type="button">Futuros</button>
+                    <button class="filter-tab" data-filter="past" type="button">Passados</button>
                 </div>
                 <div class="cards-grid" id="allAgendaGrid">
                     <!-- All agenda items will be populated here -->
@@ -123,12 +135,12 @@
             <!-- Settings Page -->
             <div id="settingsPage" class="page">
                 <div class="page-header">
-                    <button class="back-btn" data-target="home">
+                    <button class="back-btn" data-target="home" type="button" aria-label="Voltar">
                         <i class="fas fa-arrow-left"></i>
                     </button>
                     <h1>Definições</h1>
                 </div>
-                <div class="settings-list">
+                <div class="settings-list" id="settingsList">
                     <!-- Settings items will be populated by JavaScript -->
                 </div>
             </div>
@@ -141,8 +153,8 @@
             <h3>Confirmar?</h3>
             <p>Pretende sair da aplicação?</p>
             <div class="modal-buttons">
-                <button class="btn btn-secondary" id="cancelExit">Não</button>
-                <button class="btn btn-primary" id="confirmExit">Sim</button>
+                <button class="btn btn-secondary" id="cancelExit" type="button">Não</button>
+                <button class="btn btn-primary" id="confirmExit" type="button">Sim</button>
             </div>
         </div>
     </div>
@@ -150,7 +162,7 @@
     <!-- News Detail Modal -->
     <div id="newsModal" class="modal">
         <div class="modal-content news-modal">
-            <button class="close-btn" id="closeNewsModal">
+            <button class="close-btn" id="closeNewsModal" type="button" aria-label="Fechar">
                 <i class="fas fa-times"></i>
             </button>
             <div id="newsModalContent">
@@ -162,13 +174,19 @@
     <!-- Event Detail Modal -->
     <div id="eventModal" class="modal">
         <div class="modal-content event-modal">
-            <button class="close-btn" id="closeEventModal">
+            <button class="close-btn" id="closeEventModal" type="button" aria-label="Fechar">
                 <i class="fas fa-times"></i>
             </button>
             <div id="eventModalContent">
                 <!-- Event content will be populated here -->
             </div>
         </div>
+    </div>
+
+    <!-- Loading Indicator -->
+    <div id="loadingIndicator" class="loading-indicator hidden">
+        <div class="spinner"></div>
+        <p>A carregar...</p>
     </div>
 
     <script src="script.js"></script>
